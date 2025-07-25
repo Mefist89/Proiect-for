@@ -1,51 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/realizare.css" />
-    <link rel="stylesheet" href="../css/evocare.css" />
     <link rel="stylesheet" href="../css/chellange.css" />
+    <link rel="stylesheet" href="../css/evocare.css" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="icon" type="image/png" href="../favicon.png" />
-    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
-    <!-- google fonts CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
       rel="stylesheet"
     />
-    <!-- boxicons CSS -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <title>Etapa : Chellange</title>
+    <title data-key="challengeTitle">Etapa : Challenge</title>
   </head>
   <body>
     <header id="#">
-      <a href="../index.html" class="logo"
-        ><i class="bx bxs-home"></i>Proiect FOR</a
-      >
+      <a href="../index.html" class="logo" data-key="logoText"><i class="bx bxs-home"></i>Proiect FOR</a>
+
+      <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
+      <div class="lang-switcher">
+          <button id="lang-ro">RO</button>
+          <button id="lang-en">EN</button>
+      </div>
+
       <ul class="navlist">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../pages/evocare.html">Evocare</a></li>
-        <li><a href="../pages/realizare.html">Realizare</a></li>
-        <li><a href="../pages/reflectie.html">Reflectie</a></li>
-        <li><a href="../pages/extensie.html">Extensie</a></li>
-        <li><a href="../pages/chellange.html" class="active">Challenge</a></li>
+        <li><a href="../index.html" data-key="navHome">Home</a></li>
+        <li><a href="../pages/evocare.html" data-key="navEvocare">Evocare</a></li>
+        <li><a href="../pages/realizare.html" data-key="navRealizare">Realizare</a></li>
+        <li><a href="../pages/reflectie.html" data-key="navReflectie">Reflectie</a></li>
+        <li><a href="../pages/extensie.html" data-key="navExtensie">Extensie</a></li>
+        <li><a href="../pages/chellange.html" class="active" data-key="navChallenge">Challenge</a></li>
       </ul>
       <div class="nav-icons">
         <a href="#"><i class="bx bx-search-alt-2"></i></a>
         <div class="bx bx-menu" id="menu-icon"></div>
       </div>
     </header>
+
     <section class="home" id="home">
       <div class="home-text">
-        <h1>Chellange <span>Page</span></h1>
-        <!-- <a href="#" class="btn">Explore Menu <i class='bx bxs-right-arrow' ></i> </a> -->
+        <h1 data-key="challengeHero">Challenge <span>Page</span></h1>
       </div>
       <div class="home-img">
         <img src="../img/hero.png" alt="main image" />
@@ -54,43 +55,36 @@
 
     <section class="shop" id="shop">
       <div class="middle-text">
-        <h4>Chellange Page</h4>
-        <h2>Probe</h2>
+        <h4 data-key="challengePageSubtitle">Challenge Page</h4>
+        <h2 data-key="challengePageTitle">Probe</h2>
       </div>
     </section>
-    <!--container-->
+    
     <section class="container">
       <div class="container-box">
         <i class="bx bx-check"></i>
-        <h3>Quiz Online</h3>
-        <h4>-1-</h4>
+        <h3 data-key="probe1Title">Quiz Online</h3>
       </div>
-
       <div class="container-box">
         <i class="bx bx-loader-circle"></i>
-        <h3>Număr repetări</h3>
-        <h4>-2-</h4>
+        <h3 data-key="probe2Title">Număr repetări</h3>
       </div>
-
       <div class="container-box">
         <i class="bx bxs-pencil"></i>
-        <h3>Spațiile libere</h3>
-        <h4>-3-</h4>
+        <h3 data-key="probe3Title">Spațiile libere</h3>
       </div>
-
       <div class="container-box">
         <i class="bx bx-code"></i>
-        <h3>Crearea programelor</h3>
-        <h4>-4-</h4>
+        <h3 data-key="probe4Title">Crearea programelor</h3>
       </div>
     </section>
-    </section>
-    <!--container-->
+    
+    <!-- Proba 1: Mini Quiz -->
     <section class="about" id="about">
       <div class="about-text">
         <div class="middle-text">
-            <h4>Mini Quiz</h4>
-            <h2>Proba #1</h2>
+            <h4 data-key="miniQuizTitle">Mini Quiz</h4>
+            <h2 data-key="probe1Subtitle">Proba #1</h2>
         </div>
         <div class="quiz-container">
           <div id="quiz">
@@ -107,135 +101,135 @@
       </div>
     </section>
 
-    <section class="about" id="about">
+    <!-- Proba 2: Număr de repetări -->
+    <section class="about" id="about2">
         <div class="about-text">
           <div class="middle-text">
-              <h4>Număr de repetări</h4>
-              <h2>Proba #2</h2>
+              <h4 data-key="repetitionsTitle">Număr de repetări</h4>
+              <h2 data-key="probe2Subtitle">Proba #2</h2>
           </div>
           <div class="quiz-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Secvența de cod</th>
-                        <th>Număr de iterații</th>
+                        <th data-key="tableHeader1">Secvența de cod</th>
+                        <th data-key="tableHeader2">Număr de iterații</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><code>for (int i = 0; i < 5; i++)</code></td>
-                        <td><input type="number" id="q1" placeholder="Introduceți aici"></td>
+                        <td><input type="number" id="q1" data-key-placeholder="placeholderInput"></td>
                     </tr>
                     <tr>
                         <td><code>for (int i = 1; i <= 10; i++)</code></td>
-                        <td><input type="number" id="q2" placeholder="Introduceți aici"></td>
+                        <td><input type="number" id="q2" data-key-placeholder="placeholderInput"></td>
                     </tr>
                     <tr>
                         <td><code>for (int i = 0; i < 20; i += 2)</code></td>
-                        <td><input type="number" id="q3" placeholder="Introduceți aici"></td>
+                        <td><input type="number" id="q3" data-key-placeholder="placeholderInput"></td>
                     </tr>
                     <tr>
                         <td><code>for (int i = 10; i > 0; i--)</code></td>
-                        <td><input type="number" id="q4" placeholder="Introduceți aici"></td>
+                        <td><input type="number" id="q4" data-key-placeholder="placeholderInput"></td>
                     </tr>
                     <tr>
                         <td><code>for (int i = 1; i <= 15; i *= 2)</code></td>
-                        <td><input type="number" id="q5" placeholder="Introduceți aici"></td>
+                        <td><input type="number" id="q5" data-key-placeholder="placeholderInput"></td>
                     </tr>
                 </tbody>
             </table>
             <div style="text-align: center;">
-                <button onclick="verificaRaspunsurile()" class="btn" >Verifică Răspunsurile</button>
+                <button onclick="verificaRaspunsurile()" class="btn" data-key="checkAnswersBtn">Verifică Răspunsurile</button>
             </div>
             <div class="feedback" id="feedback"></div>        
           </div>
         </div>
       </section>
 
-      <section class="about" id="about">
+      <!-- Proba 3: Spații libere -->
+      <section class="about" id="about3">
         <div class="about-text">
           <div class="middle-text">
-              <h4>Spații libere</h4>
-              <h2>Proba #3</h2>
+              <h4 data-key="blanksTitle">Spații libere</h4>
+              <h2 data-key="probe3Subtitle">Proba #3</h2>
           </div>
           <div class="quiz-container quiz-space">
             <pre>
-  #include &lt;iostream&gt;
-  using namespace std;
+#include <iostream>
+using namespace std;
                 
-    int main() {
-      int sum = <input type="text" id="blank1" placeholder="___">;
+int main() {
+  int sum = <input type="text" id="blank1" placeholder="___">;
                 
-        for (int i = <input type="text" id="blank2" placeholder="___">; i <= <input type="text" id="blank3" placeholder="___">; i++) {
-          sum += <input type="text" id="blank4" placeholder="___">;
-        }
+  for (int i = <input type="text" id="blank2" placeholder="___">; i <= <input type="text" id="blank3" placeholder="___">; i++) {
+    sum += <input type="text" id="blank4" placeholder="___">;
+  }
                 
-      cout << "Suma este: " << <input type="text" id="blank5" placeholder="___">; 
-      cout<< endl;
-      return 0;
-      }
-                        </pre>
-                    </div>
-                <div style="text-align: center;">
-                    <button class="btn" onclick="checkAnswers()">Verifică Răspunsurile</button>
-                    <p class="feedback" id="result"></p>
-                </div>
+  cout << "Suma este: " << <input type="text" id="blank5" placeholder="___">; 
+  cout<< endl;
+  return 0;
+}
+            </pre>
+          </div>
+          <div style="text-align: center;">
+              <button class="btn" onclick="checkAnswersProbe3()" data-key="checkAnswersBtn">Verifică Răspunsurile</button>
+              <p class="feedback" id="result3"></p>
           </div>
         </div>
       </section>
 
-      <section class="about" id="about">
+      <!-- Proba 4: Crează programa -->
+      <section class="about" id="about4">
         <div class="about-text">
           <div class="middle-text">
-              <h4>Crează programa</h4>
-              <h2>Proba #4</h2>
+              <h4 data-key="createProgramTitle">Crează programa</h4>
+              <h2 data-key="probe4Subtitle">Proba #4</h2>
           </div>
           <div class="quiz-container">
-            <div id="quiz">
-
-              <table>
+            <table>
                 <thead>
                     <tr>
-                        <th>Condiția Problemei</th>
-                        <th>Cod C++</th>
+                        <th data-key="table2Header1">Condiția Problemei</th>
+                        <th data-key="table2Header2">Cod C++</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="first">Scrie un program care calculează suma numerelor pare și produsul numerelor impare între 1 și 100.</td>
+                        <td class="first" data-key="problemCondition">Scrie un program care calculează suma numerelor pare și produsul numerelor impare între 1 și 100.</td>
                         <td class="second" >
                             <pre>
-#include &lt;iostream&gt;
+#include <iostream>
 using namespace std;
                               
 int main() {
   int sum = 0; 
-  int product = 1; 
+  int multiplication = 1; 
                               
   for (<input type="text" id="forLoop" placeholder="___" />) {
     if (<input type="text" id="evenCondition" placeholder="___" />) {
       <input type="text" id="evenAction" placeholder="___" />
-        }
+    }
     if (<input type="text" id="oddCondition" placeholder="___" />) {
       <input type="text" id="oddAction" placeholder="___" />
-      }
     }
-  </pre>                            
- <p>cout << "Suma numerelor pare este: " << sum << endl; <br>
-  cout << "Produsul numerelor impare este: " << product << endl;<br>
+  }
+</pre>                            
+<p>cout << "The sum of the even numbers is: " << sum << endl; <br>
+cout << "The multiplication of odd numbers is: " << multiplication << endl;<br>
 
-  return 0;<br>
+return 0;<br>
 }
 </p> 
-                           
                         </td>
                     </tr>
                 </tbody>
             </table>
             <div style="text-align: center;">
-              <button class="btn" onclick="checkAnswers()">Verifică Răspunsurile</button>
-              <p class="feedback" id="result"></p>
+              <button class="btn" onclick="checkAnswersProbe4()" data-key="checkAnswersBtn">Verifică Răspunsurile</button>
+              <p class="feedback" id="result4"></p>
             </div>
+          </div>
         </div>
       </section>
 
@@ -243,33 +237,24 @@ int main() {
     <section class="contact" id="contact">
       <div class="contact-content">
           <div class="contact-text">
-              <h2>Pagina Chellenge</h2>
-              <p>"Eelevii au răspuns la întrebări și au creat programe folosind instrucțiunea FOR și au primit feedback imediat. În cazurile dificile, au cerut indicii de la ChatGPT pentru a rezolva problemele autonom."</p>
-              <div class="social">
-                  <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
-                  <a href="#"><i class='bx bxl-facebook' ></i></a>
-                  <a href="#"><i class='bx bxl-twitter' ></i></a>
-                  <a href="#"><i class='bx bxl-github' ></i></a>
-                  <a href="#"><i class='bx bxl-google' ></i></a>
-              </div>
+              <h2 data-key="challengeFooterTitle">Pagina Challenge</h2>
+              <p data-key="challengeFooterDesc">"Eelevii au răspuns la întrebări și au creat programe folosind instrucțiunea FOR și au primit feedback imediat. În cazurile dificile, au cerut indicii de la ChatGPT pentru a rezolva problemele autonom."</p>
           </div>
           <div class="details">
               <div class="main-d">
-                  <a href="#"><i class='bx bx-copyright' ></i></i>Cahul, 2024</a>
-              </div>
-              <div class="main-d">
-                  <a href="#"><i class='bx bxs-envelope' ></i>jeniabortnic@gmail.com</a>
+                  <a href="#"><i class='bx bx-copyright' ></i>Cahul, 2024</a>
               </div>
           </div>
       </div>
-  </section>
+    </section>
 
-  <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
+    <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Подключаем скрипты в правильном порядке -->
+    <script src="../js/translate.js"></script>
     <script src="../js/chellange.js"></script>
     <script src="../js/repetari.js"></script>
-    <!-- link to js -->
     <script src="../js/app.js"></script>
   </body>
 </html>

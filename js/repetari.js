@@ -1,51 +1,45 @@
+// Файл: /js/repetari.js
+
 function verificaRaspunsurile() {
-  // Răspunsuri corecte
+  const lang = localStorage.getItem('language') || 'ro';
   const raspunsuriCorecte = [5, 10, 10, 10, 4];
-  // Obține răspunsurile utilizatorului
   const raspunsuriUtilizator = [
-    parseInt(document.getElementById("q1").value),
-    parseInt(document.getElementById("q2").value),
-    parseInt(document.getElementById("q3").value),
-    parseInt(document.getElementById("q4").value),
+    parseInt(document.getElementById("q1").value), parseInt(document.getElementById("q2").value),
+    parseInt(document.getElementById("q3").value), parseInt(document.getElementById("q4").value),
     parseInt(document.getElementById("q5").value),
   ];
-  // Verificare
-  let corecte = 0;
-  for (let i = 0; i < raspunsuriCorecte.length; i++) {
-    if (raspunsuriUtilizator[i] === raspunsuriCorecte[i]) {
-      corecte++;
-    }
-  }
-  // Feedback
+  
+  let corecte = raspunsuriUtilizator.filter((r, i) => r === raspunsuriCorecte[i]).length;
+
   const feedback = document.getElementById("feedback");
-  feedback.textContent = `Ai răspuns corect la ${corecte} din ${raspunsuriCorecte.length} întrebări.`;
+  
+  if (lang === 'ro') {
+    feedback.textContent = `Ai răspuns corect la ${corecte} din ${raspunsuriCorecte.length} întrebări.`;
+  } else {
+    feedback.textContent = `You answered ${corecte} out of ${raspunsuriCorecte.length} questions correctly.`;
+  }
+  
   feedback.style.color = corecte === raspunsuriCorecte.length ? "green" : "red";
 }
 
-function checkAnswers() {
+// ПЕРЕИМЕНОВАННАЯ И ПЕРЕВЕДЕННАЯ ФУНКЦИЯ ДЛЯ ПРОБЫ #3
+function checkAnswersProbe3() {
+  const lang = localStorage.getItem('language') || 'ro';
   const answers = ["0", "1", "10", "i", "sum"];
   const userAnswers = [
-    document.getElementById("blank1").value.trim(),
-    document.getElementById("blank2").value.trim(),
-    document.getElementById("blank3").value.trim(),
-    document.getElementById("blank4").value.trim(),
+    document.getElementById("blank1").value.trim(), document.getElementById("blank2").value.trim(),
+    document.getElementById("blank3").value.trim(), document.getElementById("blank4").value.trim(),
     document.getElementById("blank5").value.trim(),
   ];
 
-  let correct = true;
-  for (let i = 0; i < answers.length; i++) {
-    if (userAnswers[i] !== answers[i]) {
-      correct = false;
-      break;
-    }
-  }
+  let correct = userAnswers.every((answer, index) => answer === answers[index]);
 
-  const result = document.getElementById("result");
+  const result = document.getElementById("result3"); // Используем уникальный ID
   if (correct) {
-    result.textContent = "Toate răspunsurile sunt corecte! Bravo!";
+    result.textContent = lang === 'ro' ? "Toate răspunsurile sunt corecte! Bravo!" : "All answers are correct! Well done!";
     result.style.color = "green";
   } else {
-    result.textContent = "Unele răspunsuri sunt greșite. Mai încearcă!";
+    result.textContent = lang === 'ro' ? "Unele răspunsuri sunt greșite. Mai încearcă!" : "Some answers are wrong. Try again!";
     result.style.color = "red";
   }
 }
